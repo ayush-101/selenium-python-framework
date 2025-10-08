@@ -17,3 +17,6 @@ class LoginPage(BasePage):
         self.type(self.UserName_Input, username)
         self.type(self.Password_Input, password)
         self.click(self.Submit_Button)
+
+    def get_error_message(self, locator):
+        return self.get_message(locator)

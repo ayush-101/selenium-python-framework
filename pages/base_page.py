@@ -21,5 +21,4 @@ class BasePage:
        # return element.text
 
     def get_message(self, locator):
-        return self.driver.find_element(*locator).text
-
+        return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator)).text
